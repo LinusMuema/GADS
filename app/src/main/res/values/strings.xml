@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GADS</string>
+    <string name="submit">Submit</string>
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="name">Example Name</string>
+    <string name="details">%1$d %2$s %3$s</string>
 </resources>
