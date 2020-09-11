@@ -15,7 +15,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:id="@+id/dialog_image"/>
+            android:src="@drawable/success"
+            android:visibility="gone"
+            android:id="@+id/dialog_image_success"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/error"
+            android:visibility="gone"
+            android:id="@+id/dialog_image_error"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"

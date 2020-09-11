@@ -33,14 +33,6 @@ fun ImageView.loadImage(uri: String){
     Glide.with(this.context).setDefaultRequestOptions(options).load(uri).into(this)
 }
 
-fun ImageView.loadDrawable(id: Int){
-    val options = RequestOptions()
-        .placeholder(getProgressDrawable(this.context))
-        .error(R.drawable.image_error)
-
-    Glide.with(this.context).setDefaultRequestOptions(options).load(id).into(this)
-}
-
 fun View.setDimens(width: Int, height:Int){
     this.requestLayout()
     this.layoutParams.width = width

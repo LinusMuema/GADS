@@ -1,16 +1,18 @@
 package com.moose.gads.features.submit
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.InsetDrawable
 import android.os.Bundle
+import android.widget.LinearLayout.LayoutParams
 import androidx.appcompat.app.ActionBar
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import com.moose.gads.R
 import com.moose.gads.features.home.HomeActivity
 import com.moose.gads.utils.CustomDialog
 import com.moose.gads.utils.hideBottomBar
 import kotlinx.android.synthetic.main.activity_submit.*
-import kotlinx.android.synthetic.main.leaders_list_item.view.*
 import kotlinx.android.synthetic.main.submit_toolbar.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -29,8 +31,14 @@ class SubmitActivity : AppCompatActivity() {
         supportActionBar!!.setCustomView(R.layout.submit_toolbar)
 
         viewModel.exception.observe(this, {
-            if (it == "success") CustomDialog(this, "response", true).show()
-            else CustomDialog(this, "response", false).show()
+            if (it == "success") {
+                showDialog("response", true)
+                firstname_input.text.clear()
+                lastname_input.text.clear()
+                email_input.text.clear()
+                repo_input.text.clear()
+            }
+            else showDialog("response", false)
         })
 
         submit.setOnClickListener {
@@ -40,16 +48,7 @@ class SubmitActivity : AppCompatActivity() {
                 email_input.text.isEmpty() -> email_input.error = fieldError
                 repo_input.text.isEmpty() -> repo_input.error = fieldError
                 else -> {
-                    val dialog = CustomDialog(this, "confirm", true)
-                    dialog.setOnDismissListener {
-                        viewModel.submitProject(
-                            firstname_input.text.toString(),
-                            lastname_input.text.toString(),
-                            email_input.text.toString(),
-                            repo_input.text.toString()
-                        )
-                    }
-                    dialog.show()
+                    showDialog("confirm", false)
                 }
             }
         }
@@ -58,6 +57,23 @@ class SubmitActivity : AppCompatActivity() {
         btn_back.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
+    }
+
+    private fun showDialog(type: String, response: Boolean){
+        val dialog = CustomDialog(this, type, response)
+        if (type == "confirm"){
+            dialog.setOnDismissListener {
+                viewModel.submitProject(
+                    firstname_input.text.toString(),
+                    lastname_input.text.toString(),
+                    email_input.text.toString(),
+                    repo_input.text.toString()
+                )
+            }
+        }
+        dialog.show()
+        dialog.window!!.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        dialog.window!!.setBackgroundDrawableResource(R.drawable.dialog_background)
     }
 
 }

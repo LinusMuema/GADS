@@ -24,11 +24,11 @@ class CustomDialog(context: Context, private val type: String, private val respo
             "response" -> {
                 setContentView(R.layout.dialog_response)
                 if (response) {
-                    dialog_image.loadDrawable(R.drawable.success)
+                    dialog_image_success.show()
                     dialog_message.text = "Submission Successful"
                 }
                 else {
-                    dialog_image.loadDrawable(R.drawable.error)
+                    dialog_image_error.show()
                     dialog_message.text = "Submission not Successful"
                 }
             }
