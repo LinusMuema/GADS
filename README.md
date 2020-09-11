@@ -10,10 +10,10 @@
 ## Screenshots
 | Splash Screen                     | Learning leaders page               | Skills IQ leaders                 |
 |-----------------------------------|-------------------------------------|-----------------------------------|
-| ![splash](splash.png)             | ![learners](learners.png)           | ![skills](skills.png)             |
+| ![splash](splash.png) |![learners](screenshots/learners.png)| ![skills](screenshots/skills.png) |
 
 | Submit page                       | Confirmation dialog                 | Success dialog                    |
 |-----------------------------------|-------------------------------------|-----------------------------------|
-| ![submit](submit.png)             | ![confirm](confirm.png)             | ![success](success.png)           |
+| ![submit](screenshots/submit.png) | ![confirm](screenshots/confirm.png) |![success](screenshots/success.png)|
 
 ## [APK](https://bit.ly/2FoWX30)
