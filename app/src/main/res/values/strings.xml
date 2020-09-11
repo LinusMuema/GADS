@@ -4,4 +4,12 @@
     <string name="leaderboard">LEADERBOARD</string>
     <string name="name">Example Name</string>
     <string name="details">%1$d %2$s %3$s</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_input">Email Address</string>
+    <string name="repo_input">Project on GITHUB (link)</string>
+    <string name="submit_header">Project Submission</string>
+    <string name="example_message">Example Message</string>
+    <string name="confirm">Are you sure ?</string>
+    <string name="yes">Yes</string>
 </resources>

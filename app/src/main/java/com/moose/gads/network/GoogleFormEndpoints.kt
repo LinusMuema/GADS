@@ -1,5 +1,6 @@
 package com.moose.gads.network
 
+import io.reactivex.Observable
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
@@ -11,6 +12,6 @@ interface GoogleFormEndpoints {
         @Field("entry.1824927963") email:String,
         @Field("entry.1877115667") firstName: String,
         @Field("entry.2006916086") lastName: String,
-        @Field(" entry.284483984") link: String
-    )
+        @Field("entry.284483984") link: String
+    ): Observable<String>
 }

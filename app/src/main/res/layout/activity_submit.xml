@@ -3,7 +3,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:background="@drawable/background"
     tools:context=".features.submit.SubmitActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E98402"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="@string/submit_header"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/underline"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corners"
+            android:hint="@string/first_name"
+            android:id="@+id/firstname_input"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corners"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:id="@+id/lastname_input"
+            android:hint="@string/last_name"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_corners"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/email_input"
+        android:hint="@string/email_input" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_corners"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/repo_input"
+        android:hint="@string/repo_input" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryTextColor"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:background="@drawable/round_button_fade"
+        android:id="@+id/submit"/>
 
 </LinearLayout>

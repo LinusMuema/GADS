@@ -35,19 +35,17 @@ class LeadersListAdapter(private val data: GadsModels, private val type: String)
     inner class LeadersViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val context = itemView.context
         fun bindSkills(skillsLeaders: SkillsLeaders) {
-            val imageUrl = "https://drive.google.com/uc?id=1wgZLUmpsnHX5T9L1RZmdJLr7vlWU1cd0"
             itemView.name.text = skillsLeaders.name
             itemView.details.text = context.resources.getString(R.string.details, skillsLeaders.score.toInt(), "Skill IQ", skillsLeaders.country)
             itemView.badge.setDimens(80, 150)
-            itemView.badge.loadImage(imageUrl)
+            itemView.badge.loadImage(skillsLeaders.badgeUrl)
         }
 
         fun bindHours(learningLeaders: LearningLeaders) {
-            val imageUrl = "https://drive.google.com/uc?id=1phRlnAkIkfFGAvwlJa4t-aNtDaFmj3im"
             itemView.name.text = learningLeaders.name
             itemView.details.text = context.resources.getString(R.string.details, learningLeaders.hours.toInt(), "learning hours", learningLeaders.country)
             itemView.badge.setDimens(100, 100)
-            itemView.badge.loadImage(imageUrl)
+            itemView.badge.loadImage(learningLeaders.badgeUrl)
         }
     }
 
