@@ -10,7 +10,7 @@
 ## Screenshots
 | Splash Screen                     | Learning leaders page               | Skills IQ leaders                 |
 |-----------------------------------|-------------------------------------|-----------------------------------|
-| ![splash](splash.png) |![learners](screenshots/learners.png)| ![skills](screenshots/skills.png) |
+| ![splash](screenshots/splash.png) |![learners](screenshots/learners.png)| ![skills](screenshots/skills.png) |
 
 | Submit page                       | Confirmation dialog                 | Success dialog                    |
 |-----------------------------------|-------------------------------------|-----------------------------------|
