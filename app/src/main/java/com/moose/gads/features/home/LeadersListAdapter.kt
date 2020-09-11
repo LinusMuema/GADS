@@ -37,7 +37,7 @@ class LeadersListAdapter(private val data: GadsModels, private val type: String)
         fun bindSkills(skillsLeaders: SkillsLeaders) {
             itemView.name.text = skillsLeaders.name
             itemView.details.text = context.resources.getString(R.string.details, skillsLeaders.score.toInt(), "Skill IQ", skillsLeaders.country)
-            itemView.badge.setDimens(80, 150)
+            itemView.badge.setDimens(150, 80)
             itemView.badge.loadImage(skillsLeaders.badgeUrl)
         }
 
